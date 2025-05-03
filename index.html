@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PedagangPulsa.com - Layanan isi ulang pulsa, paket data, e-wallet, dan pembayaran tagihan online dengan harga terbaik dan transaksi instan 24/7 untuk seluruh Indonesia.">
+    <title>PedagangPulsa.com - Solusi Pulsa Digital & Pembayaran Online</title>
+    
+    <!-- Resource hints for faster external resource loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" crossorigin="anonymous">
+    
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" href="img/hero-illustration.svg" as="image" type="image/svg+xml">
+    
+    <!-- Asynchronous icon loading -->
+    <script src="js/icon-loader.js" async></script>
+    
+    <!-- Font loader script for optimized font loading -->
+    <script src="js/font-loader.js" async></script>
+    
+    <!-- Critical CSS inline -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        :root {
+            --primary-color: #1565c0;
+            --secondary-color: #ff6f00;
+            --dark-blue: #0b3d91;
+            --white: #ffffff;
+            --light-gray: #eeeeee;
+            --dark-gray: #212121;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        /* Font display swap for better font loading performance */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300 700;
+            font-display: swap;
+            src: local('Poppins');
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--dark-gray); background-color: var(--white); }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { position: fixed; width: 100%; z-index: 1000; background-color: var(--white); box-shadow: var(--shadow); }
+        header .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo h1 { font-size: 24px; font-weight: 700; color: var(--dark-blue); }
+        .logo span { color: var(--secondary-color); }
+        .nav-menu { display: flex; }
+        .nav-menu li { margin-left: 25px; }
+        .nav-menu a { color: var(--dark-gray); font-weight: 500; }
+        .nav-menu a.active, .nav-menu a:hover { color: var(--primary-color); }
+        .hero { padding: 150px 0 80px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%); color: var(--white); }
+        .hero-content { display: flex; align-items: center; min-height: 500px; }
+        .hero-image { position: relative; min-height: 400px; }
+        .about-content { display: flex; align-items: center; min-height: 400px; }
+        .about-image { position: relative; min-height: 400px; }
+        .testimonial-card { min-height: 250px; position: relative; }
+        .testimonial-author img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .btn { display: inline-block; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: var(--transition); }
+        .btn-primary { background-color: var(--dark-blue); color: var(--white); }
+        .btn-secondary { background-color: var(--primary-color); border: 2px solid var(--primary-color); color: var(--white); }
+    </style>
+    
+    <!-- Non-critical CSS with media attribute -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome fallback for noscript -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Pedagang<span>Pulsa</span>.com</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#daftar-harga">Daftar Harga</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#cara-pembelian">Cara Pembelian</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Solusi Pulsa Digital & Pembayaran Online Terpercaya</h1>
+                    <p>Layanan isi ulang pulsa, paket data, e-wallet, dan pembayaran tagihan dengan harga terbaik dan transaksi instan 24/7</p>
+                    <div class="cta-buttons">
+                        <a href="#layanan" class="btn btn-primary">Mulai Transaksi</a>
+                        <a href="#cara-pembelian" class="btn btn-secondary">Cara Kerja</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Hero image optimized for LCP - not lazy loaded since it's above the fold -->
+                    <img src="img/hero-illustration.svg" alt="Agen Digital dengan Smartphone" fetchpriority="high" width="600" height="400" style="aspect-ratio: 3/2;">
+                    <div class="floating-icons">
+                        <div class="icon icon-1"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="icon icon-2"><i class="fas fa-signal"></i></div>
+                        <div class="icon icon-3"><i class="fas fa-wallet"></i></div>
+                        <div class="icon icon-4"><i class="fas fa-qrcode"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="wave-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div> -->
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Kami</h2>
+                <p>Berbagai layanan digital untuk memenuhi kebutuhan Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Pulsa All Operator</h3>
+                    <p>Isi ulang pulsa untuk semua operator dengan harga terbaik dan proses instan</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Paket Data</h3>
+                    <p>Berbagai pilihan paket data internet untuk kebutuhan browsing dan streaming</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>E-Wallet</h3>
+                    <p>Top up saldo e-wallet seperti OVO, GoPay, DANA, LinkAja, dan ShopeePay</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Token Listrik</h3>
+                    <p>Beli token listrik PLN prabayar dengan berbagai nominal sesuai kebutuhan</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Voucher Game</h3>
+                    <p>Top up diamond, coin, dan voucher untuk berbagai game online populer</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Pembayaran Tagihan</h3>
+                    <p>Bayar tagihan PDAM, BPJS, internet, kartu kredit, dan tagihan lainnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Harga Section -->
+    <section id="daftar-harga" class="price-list">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daftar Harga</h2>
+                <p>Harga terbaik untuk semua kebutuhan digital Anda</p>
+            </div>
+            <div class="price-tables">
+                <div class="price-category">
+                    <h3><i class="fas fa-mobile-alt"></i>Pulsa</h3>
+                    <div class="price-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nominal</th>
+                                    <th>Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XL/Axis 5.000</td>
+                                    <td>Rp 5.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Indosat 5.000</td>
+                                    <td>Rp 5.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Tree 5.000</td>
+                                    <td>Rp 5.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Telkomsel 5.000</td>
+                                    <td>Rp 5.500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="price-category">
+                    <h3><i class="fas fa-wifi"></i> E-Wallet</h3>
+                    <div class="price-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Paket</th>
+                                    <th>Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dana</td>
+                                    <td>Rp 25.000</td>
+                                </tr>
+                                <tr>
+                                    <td>OVO</td>
+                                    <td>Rp 50.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Gopay</td>
+                                    <td>Rp 80.000</td>
+                                </tr>
+                                <tr>
+                                    <td>ShopeePay</td>
+                                    <td>Rp 100.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Link Aja</td>
+                                    <td>Rp 150.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="price-category">
+                    <h3><i class="fas fa-bolt"></i> Token Listrik</h3>
+                    <div class="price-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nominal</th>
+                                    <th>Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Token 20.000</td>
+                                    <td>Rp 20.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Token 50.000</td>
+                                    <td>Rp 50.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Token 100.000</td>
+                                    <td>Rp 100.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Token 200.000</td>
+                                    <td>Rp 200.500</td>
+                                </tr>
+                                <tr>
+                                    <td>Token 500.000</td>
+                                    <td>Rp 500.500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="price-note">
+                <p><i class="fas fa-info-circle"></i> Harga dapat berubah sewaktu-waktu. Silakan cek secara berkala.</p>
+                <a href="#kontak" class="btn btn-secondary">Tanya Harga Lainnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Below-the-fold image using lazy loading -->
+                    <img data-src="img/about-illustration.svg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Tentang PedagangPulsa.com" loading="lazy" width="500" height="400" style="aspect-ratio: 5/4;">
+                </div>
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2>Tentang Kami</h2>
+                        <p>Kenali lebih dekat PedagangPulsa.com</p>
+                    </div>
+                    <p>PedagangPulsa.com adalah platform penyedia layanan pulsa digital dan pembayaran online yang telah dipercaya oleh ribuan pelanggan di seluruh Indonesia. Kami berkomitmen untuk memberikan layanan terbaik dengan harga kompetitif dan transaksi yang cepat serta aman.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transaksi 24/7 Non-Stop</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Harga Kompetitif</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Proses Cepat & Otomatis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Layanan Pelanggan Responsif</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Pembelian Section -->
+    <section id="cara-pembelian" class="how-to">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cara Pembelian</h2>
+                <p>Ikuti langkah mudah berikut untuk melakukan transaksi</p>
+            </div>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Daftar/Login</h3>
+                    <p>Buat akun baru atau login ke akun yang sudah ada</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hand-pointer"></i>
+                    </div>
+                    <h3>Pilih Layanan</h3>
+                    <p>Pilih jenis layanan yang ingin Anda gunakan</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Isi Detail</h3>
+                    <p>Masukkan nomor tujuan dan nominal yang diinginkan</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Pembayaran</h3>
+                    <p>Pilih metode pembayaran dan selesaikan transaksi</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Transaksi Berhasil</h3>
+                    <p>Pulsa atau layanan akan segera diproses ke nomor tujuan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimoni Pelanggan</h2>
+                <p>Apa kata mereka tentang layanan kami</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Transaksi cepat dan mudah. Pulsa langsung masuk dalam hitungan detik. Harga juga lebih murah dibanding tempat lain."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <!-- Lazy loaded testimonial avatar -->
+                        <img data-src="img/avatar-1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Testimonial Author" loading="lazy" width="60" height="60" style="aspect-ratio: 1;">
+                        <div class="author-info">
+                            <h4>Budi Santoso</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Saya sudah berlangganan selama 2 tahun dan tidak pernah mengalami masalah. Layanan pelanggan juga sangat responsif."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <!-- Lazy loaded testimonial avatar -->
+                        <img data-src="img/avatar-2.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Testimonial Author" loading="lazy">
+                        <div class="author-info">
+                            <h4>Siti Nurhaliza</h4>
+                            <p>Bandung</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Banyak promo menarik dan harga sangat kompetitif. Saya selalu isi pulsa dan bayar tagihan di sini."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <!-- Lazy loaded testimonial avatar -->
+                        <img data-src="img/avatar-3.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Testimonial Author" loading="lazy">
+                        <div class="author-info">
+                            <h4>Rudi Hermawan</h4>
+                            <p>Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Untuk Memulai?</h2>
+                <p>Bergabunglah dengan ribuan pelanggan yang puas dengan layanan kami</p>
+                <a href="#" class="btn btn-primary">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hubungi Kami</h2>
+                <p>Kami siap membantu Anda</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Alamat</h3>
+                            <p>Desa Genito, Kec. Windusari, Kab Magelang, Jateng 56152</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>0813 1211 1781</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>support@pedagangpulsa.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Jam Operasional</h3>
+                            <p>24/7 (Sistem Otomatis)<br>Customer Service: 08.00 - 20.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subjek" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Pesan" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Pedagang<span>Pulsa</span>.com</h2>
+                    <p>Solusi pulsa digital dan pembayaran online terpercaya</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" title="Visit our Facebook page"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" title="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" title="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp" title="Contact us on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                        <li><a href="#daftar-harga">Daftar Harga</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#cara-pembelian">Cara Pembelian</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Pulsa All Operator</a></li>
+                        <li><a href="#">Paket Data</a></li>
+                        <li><a href="#">E-Wallet</a></li>
+                        <li><a href="#">Token Listrik</a></li>
+                        <li><a href="#">Voucher Game</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Berlangganan</h3>
+                    <p>Dapatkan info promo dan penawaran terbaru</p>
+                    <form>
+                        <input type="email" placeholder="Email Anda" required>
+                        <button type="submit" aria-label="Subscribe to newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PedagangPulsa.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript with defer attribute to prevent render blocking -->
+    <script src="js/script.js" defer></script>
+    
+    <!-- Image lazy loading script -->
+    <script src="js/image-lazy-loader.js" defer></script>
+</body>
+</html>
